@@ -1,0 +1,22 @@
+{
+  "name": "todo-app-workshop",
+  "version": "1.0.0",
+  "description": "To-Do List App for AI Dev Day 2025 Workshop",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "jest",
+    "test:e2e": "playwright test"
+  },
+  "keywords": ["todo", "workshop", "ai", "tdd"],
+  "author": "AI Dev Day 2025",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "supertest": "^6.3.3",
+    "@playwright/test": "^1.40.0"
+  }
+}

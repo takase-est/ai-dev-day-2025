@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List - AI Dev Day 2025</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>To-Do List</h1>
+            <p>AI Dev Day 2025 Workshop</p>
+        </header>
+
+        <main>
+            <div class="todo-input-section">
+                <input 
+                    type="text" 
+                    id="todoInput" 
+                    placeholder="新しいタスクを入力..."
+                    data-testid="todo-input"
+                    maxlength="100"
+                >
+                <button 
+                    id="addButton" 
+                    data-testid="add-button"
+                >
+                    追加
+                </button>
+            </div>
+
+            <div class="filter-section">
+                <button 
+                    class="filter-button active" 
+                    data-filter="all"
+                    data-testid="filter-all"
+                >
+                    全て
+                </button>
+                <button 
+                    class="filter-button" 
+                    data-filter="active"
+                    data-testid="filter-active"
+                >
+                    未完了
+                </button>
+                <button 
+                    class="filter-button" 
+                    data-filter="completed"
+                    data-testid="filter-completed"
+                >
+                    完了
+                </button>
+            </div>
+
+            <div class="stats-section">
+                <span id="todoCount" data-testid="todo-count">0個のタスク</span>
+            </div>
+
+            <div class="todo-list-section">
+                <ul id="todoList" data-testid="todo-list">
+                    <!-- ToDoアイテムがここに動的に追加されます -->
+                </ul>
+            </div>
+
+            <div class="actions-section">
+                <button 
+                    id="markAllCompleted" 
+                    data-testid="mark-all-completed"
+                    style="display: none;"
+                >
+                    全て完了にする
+                </button>
+                <button 
+                    id="clearCompleted" 
+                    data-testid="clear-completed"
+                    style="display: none;"
+                >
+                    完了したタスクを削除
+                </button>
+            </div>
+        </main>
+
+        <footer>
+            <p>Playwright対応のdata-testid属性付き</p>
+        </footer>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
