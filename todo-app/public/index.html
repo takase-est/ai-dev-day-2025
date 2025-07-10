@@ -11,6 +11,19 @@
         <header>
             <h1>To-Do List</h1>
             <p>AI Dev Day 2025 Workshop</p>
+            
+            <!-- TDD演習：ステータス表示セクション -->
+            <div class="status-section" data-testid="status-section">
+                <div class="status-indicator" data-testid="status-indicator">
+                    <span class="status-light" data-testid="status-light"></span>
+                    <span class="status-text" data-testid="status-text">読み込み中...</span>
+                </div>
+                <div class="stats-display" data-testid="stats-display">
+                    <span>総数: <span data-testid="total-count">0</span></span>
+                    <span>完了: <span data-testid="completed-count">0</span></span>
+                    <span>完了率: <span data-testid="completion-rate">0%</span></span>
+                </div>
+            </div>
         </header>
 
         <main>
@@ -87,6 +100,8 @@
         </footer>
     </div>
 
-    <script src="app.js"></script>
+    <script src="js/api.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/todoApp.js"></script>
 </body>
 </html>
